@@ -1,0 +1,59 @@
+//main: ../style.less
+.team{
+  width: 100%;
+  height: 290px;
+}
+.team__row{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.team__coll{
+  width: 50%;
+  height: 100%;
+  position: relative;
+  &--img{
+    position: absolute;
+  }
+  &--l{
+    background-color: @grey;
+    padding-right: 2.5rem;
+    div{
+      width: 193px;
+      height: 217px;
+      top: 2.7rem;
+      left: 15.7rem;
+    }
+    p{
+      position: absolute;
+      left: 10rem;
+      top: 14.4rem;
+      font-family: @roboto;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 2.4rem;
+      line-height: 28px;
+      color: @white;
+    }
+  }
+  &--r{
+    div{
+      width: 193px;
+      height: 217px;
+      top: 16.7rem;
+      right: 15.8rem;
+    }
+    h3{
+      position: absolute;
+      right: 22.6rem;
+      top: 23.5rem;
+      font-family: @roboto;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 5.6rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: @grey-h;
+    }
+  }
+}

@@ -327,9 +327,6 @@ a:focus {
 }
 .intro__coll--l {
   position: relative;
-  background: url(../img/intro/bg_main.png);
-  background-repeat: no-repeat;
-  background-position-y: bottom;
   background-size: auto;
 }
 .intro__coll--r {
@@ -481,4 +478,61 @@ a:focus {
 .burger:hover {
   cursor: pointer;
   box-shadow: 2px 2px 0 #949FA3;
+}
+/*3. team*/
+.team {
+  width: 100%;
+  height: 290px;
+}
+.team__row {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.team__coll {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+.team__coll--img {
+  position: absolute;
+}
+.team__coll--l {
+  background-color: #333333;
+  padding-right: 2.5rem;
+}
+.team__coll--l div {
+  width: 193px;
+  height: 217px;
+  top: 2.7rem;
+  left: 15.7rem;
+}
+.team__coll--l p {
+  position: absolute;
+  left: 10rem;
+  top: 14.4rem;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 28px;
+  color: #ffffff;
+}
+.team__coll--r div {
+  width: 193px;
+  height: 217px;
+  top: 16.7rem;
+  right: 15.8rem;
+}
+.team__coll--r h3 {
+  position: absolute;
+  right: 22.6rem;
+  top: 23.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 5.6rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #585959;
 }
