@@ -63,6 +63,12 @@
   margin-top: 1.8rem;
   position: relative;
   z-index: 1;
+  &--header {
+    position: relative;
+    &:hover {
+      cursor: pointer;
+    }
+  }
   &--list {
     opacity: 0;
     visibility: hidden;
@@ -86,74 +92,74 @@
       transition: background-color 0.2s linear;
       &:hover {
         cursor: pointer;
-        background-color: rgba(@grey-t, 0.1);
-      }
-    }
-    &--header {
-      position: relative;
-      &:hover {
-        cursor: pointer;
+        background-color: rgba(@grey-t, 0.25);
       }
     }
   }
+}
+.header__close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.2s linear, visibility 0.2s linear;
+  h5 {
+    font-family: @roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.5rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: @grey-t;
+    margin-right: 0.25rem;
+  }
+  span {
+    font-size: 2.5rem;
+    color: @grey-t;
+    margin-top: -0.6rem;
+  }
+}
+.header__open {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s linear, visibility 0.2s linear;
+  h5 {
+    font-family: @roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.5rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: @grey-t;
+    margin-right: 2rem;
+  }
+  span {
+    font-size: 2.5rem;
+    color: @grey-t;
+    margin-top: -0.6rem;
+  }
+}
+.header--active {
   .header__close {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.2s linear, visibility 0.2s linear;
-    &--active {
-      opacity: 1;
-      visibility: visible;
-    }
-    h5 {
-      font-family: @roboto;
-      font-style: normal;
-      font-weight: 300;
-      font-size: 1.5rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: @grey-t;
-      margin-right: 0.25rem;
-    }
-    span {
-      font-size: 2.5rem;
-      color: @grey-t;
-      margin-top: -0.6rem;
-    }
   }
   .header__open {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.2s linear, visibility 0.2s linear;
-    &--active {
-      opacity: 1;
-      visibility: visible;
-    }
-    h5 {
-      font-family: @roboto;
-      font-style: normal;
-      font-weight: 300;
-      font-size: 1.5rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: @grey-t;
-      margin-right: 2rem;
-    }
-    span {
-      font-size: 2.5rem;
-      color: @grey-t;
-      margin-top: -0.6rem;
-    }
+    opacity: 1;
+    visibility: visible;
   }
+}
+.show__list{
+  opacity: 1;
+  visibility: visible;
 }

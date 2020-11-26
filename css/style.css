@@ -601,6 +601,12 @@ a:focus {
   position: relative;
   z-index: 1;
 }
+.drop__down--header {
+  position: relative;
+}
+.drop__down--header:hover {
+  cursor: pointer;
+}
 .drop__down--list {
   opacity: 0;
   visibility: hidden;
@@ -626,30 +632,20 @@ a:focus {
 }
 .drop__down--list p:hover {
   cursor: pointer;
-  background-color: rgba(148, 159, 163, 0.1);
+  background-color: rgba(148, 159, 163, 0.25);
 }
-.drop__down--list--header {
-  position: relative;
-}
-.drop__down--list--header:hover {
-  cursor: pointer;
-}
-.drop__down .header__close {
+.header__close {
   position: absolute;
   top: 0;
   left: 0;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.2s linear, visibility 0.2s linear;
-}
-.drop__down .header__close--active {
   opacity: 1;
   visibility: visible;
+  transition: opacity 0.2s linear, visibility 0.2s linear;
 }
-.drop__down .header__close h5 {
+.header__close h5 {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -659,12 +655,12 @@ a:focus {
   color: #949FA3;
   margin-right: 0.25rem;
 }
-.drop__down .header__close span {
+.header__close span {
   font-size: 2.5rem;
   color: #949FA3;
   margin-top: -0.6rem;
 }
-.drop__down .header__open {
+.header__open {
   position: absolute;
   top: 0;
   left: 0;
@@ -675,11 +671,7 @@ a:focus {
   visibility: hidden;
   transition: opacity 0.2s linear, visibility 0.2s linear;
 }
-.drop__down .header__open--active {
-  opacity: 1;
-  visibility: visible;
-}
-.drop__down .header__open h5 {
+.header__open h5 {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -689,8 +681,20 @@ a:focus {
   color: #949FA3;
   margin-right: 2rem;
 }
-.drop__down .header__open span {
+.header__open span {
   font-size: 2.5rem;
   color: #949FA3;
   margin-top: -0.6rem;
+}
+.header--active .header__close {
+  opacity: 0;
+  visibility: hidden;
+}
+.header--active .header__open {
+  opacity: 1;
+  visibility: visible;
+}
+.show__list {
+  opacity: 1;
+  visibility: visible;
 }

@@ -11,8 +11,8 @@ jQuery(document).ready(function(){
   });
   /*post block*/
   var dropDownBtn = $(".drop__down--header");
-  var downCloseBtn = $(".header__close");
   dropDownBtn.on("click", function(){
-    $(".header__close").toggleClass("header__close--active");
+    $(this).toggleClass("header--active");
+    $(this).parent(".drop__down").find(".drop__down--list").toggleClass("show__list");
   });
 });
