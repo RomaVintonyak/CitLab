@@ -4,6 +4,16 @@
   margin-top: 20rem;
   padding-left: 17rem;
   padding-right: 29rem;
+  @media @lcd{
+    margin-top: 35rem;
+    padding: 0 10rem;
+  }
+  @media @notebook{
+    padding: 0 1rem;
+  }
+  @media @mobile-sm{
+    margin-top: 10rem;
+  }
 }
 .post__row {
   width: 100%;
@@ -25,6 +35,9 @@
     margin-bottom: 4rem;
     img {
       margin-right: 3.8rem;
+      @media @mobile-sm{
+        margin-right: 1.5rem;
+      }
     }
     h3 {
       font-family: @roboto;
@@ -43,6 +56,9 @@
         height: 1.5px;
         background-color: @grey-h;
       }
+      @media @mobile-sm{
+        font-size: 2rem;
+      }
     }
   }
   h6 {
@@ -52,11 +68,17 @@
     font-size: 1.8rem;
     color: @grey-t;
     margin-bottom: 2.8rem;
+    @media @mobile-sm{
+      font-size: 1.6rem;
+    }
   }
   hr {
     background-color: @grey-h;
     margin-block-end: 0;
     margin-block-start: 0;
+  }
+  @media @tablet{
+    flex-basis: 100%;
   }
 }
 .drop__down {
@@ -74,7 +96,7 @@
     visibility: hidden;
     height: 75px;
     transition: opacity 0.4s linear, visibility 0.4s linear;
-    width: 35%;
+    width: 50%;
     text-align: left;
     position: absolute;
     left: 2rem;
@@ -94,6 +116,9 @@
         cursor: pointer;
         background-color: rgba(@grey-t, 0.25);
       }
+    }
+    @media @lcd{
+      width: 60%;
     }
   }
 }

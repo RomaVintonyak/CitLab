@@ -15,4 +15,11 @@ jQuery(document).ready(function(){
     $(this).toggleClass("header--active");
     $(this).parent(".drop__down").find(".drop__down--list").toggleClass("show__list");
   });
+  /*burger btn click*/
+  var burgerBtn = $("#burgerBtn");
+  var mainMenu = $(".main__menu");
+  burgerBtn.on("click", function(){
+    $(".burger--item").toggleClass("open__button");
+    mainMenu.toggleClass("main__menu--mobile");
+  });
 });
