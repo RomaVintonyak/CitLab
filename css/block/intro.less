@@ -2,6 +2,21 @@
 .intro {
   width: 100%;
   height: 960px;
+  @media @lcd{
+    height: 900px;
+  }
+  @media @notebook{
+    height: 900px;
+  }
+  @media @tablet{
+    height: 760px;
+  }
+  @media @mobile{
+    height: 550px;
+  }
+  @media @mobile-sm{
+    height: 450px;
+  }
 }
 .intro__wraper {
   width: 100%;
@@ -13,15 +28,22 @@
   height: 100%;
   &--l {
     position: relative;
-    background: url(../img/intro/bg_main.png);
-    background-repeat: no-repeat;
-    background-position-y: bottom;
     background-size: auto;
+    @media @tablet {
+      display: none;
+    }
   }
   &--r {
     position: relative;
     background-color: @grey;
     padding-left: 135px;
+    @media (max-width: 1720px) {
+      padding-left: 55px;
+    }
+    @media @tablet {
+      padding: 0 1rem;
+      width: 100%;
+    }
   }
 }
 .nav__brand {
@@ -33,10 +55,23 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  &--header{
+  &--header {
     height: 60px;
     width: 50%;
     display: none;
+    @media @tablet {
+      display: flex;
+      width: 60%;
+      p {
+        color: @white!important;
+      }
+    }
+    @media @mobile{
+      width: 80%;
+    }
+    @media @mobile-sm{
+      width: 85%;
+    }
   }
   a {
     display: inline-block;
@@ -53,18 +88,21 @@
     color: @grey-h;
   }
 }
-.figure__brand{
+.figure__brand {
   position: absolute;
   top: 307px;
   left: 317px;
   width: 290px;
   height: 290px;
+  @media @lcd {
+    left: 150px;
+  }
 }
-.intro__content{
+.intro__content {
   position: relative;
   z-index: 20;
   margin-top: 222px;
-  h1{
+  h1 {
     font-family: @roboto;
     font-style: normal;
     font-weight: 700;
@@ -74,8 +112,24 @@
     text-transform: uppercase;
     color: @white;
     margin-bottom: 5rem;
+    @media @tablet{
+      font-size: 3.5rem;
+      margin-bottom: 3rem;
+    }
+    @media @tablet{
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    @media @mobile{
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      line-height: 40px;
+    }
+    @media @mobile-sm{
+      line-height: 20px;
+    }
   }
-  h2{
+  h2 {
     font-family: @roboto;
     font-style: normal;
     font-weight: 700;
@@ -83,25 +137,48 @@
     line-height: 28px;
     color: @white;
     width: 90%;
+    @media @tablet{
+      font-size: 1.8rem;
+      width: 100%;
+    }
+    @media @tablet{
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+    @media @mobile{
+      font-size: 1.2rem;
+    }
+    @media @mobile-sm{
+      line-height: 12px;
+    }
+  }
+  @media @notebook{
+    margin-top: 40px;
+  }
+  @media @tablet{
+    margin-top: 150px;
+  }
+  @media @mobile{
+    margin-top: 125px;
   }
 }
-.intro__figure{
+.intro__figure {
   position: absolute;
   bottom: 1.5rem;
   right: 0;
   z-index: 2;
 }
-.intro__btn{
+.intro__btn {
   position: absolute;
   bottom: 70px;
   z-index: 5;
-  a{
-    svg{
+  a {
+    svg {
       transition: fill 0.2s linear;
     }
     text-decoration: none;
-    &:hover{
-      svg{
+    &:hover {
+      svg {
         fill: @white;
       }
     }
